@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">scan glucide aide</string>
+    <string name="button_scan">Scan</string>
+    <string name="button_scan_manual">Entré Manual</string>
+</resources>
