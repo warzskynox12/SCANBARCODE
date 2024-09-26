@@ -2,14 +2,28 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
 
-    <androidx.camera.view.PreviewView
-        android:id="@+id/camera_preview"
-        android:background="@drawable/scanborder"
+        app:layout_constraintRight_toRightOf="parent" />
+    <View
         android:layout_width="350dp"
         android:layout_height="125dp"
         android:layout_centerInParent="true"
+        android:background="@drawable/scanborder"
         />
+    <androidx.camera.view.PreviewView
+        android:id="@+id/camera_preview"
+        android:layout_width="350dp"
+        android:layout_height="125dp"
+        android:background="@drawable/border"
+        android:layout_centerInParent="true"
+        />
+
 
     <View
         android:id="@+id/view1"

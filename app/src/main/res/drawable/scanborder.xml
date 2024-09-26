@@ -3,4 +3,5 @@
         <solid android:color="#00FFFFFF" />
         <stroke android:width="5dp" android:color="#FFFFFF" /> <!-- Bordure blanche de 2dp -->
         <corners android:radius="20dp" /> <!-- Optionnel: arrondir les coins du bouton -->
+        <padding android:left="10dp" android:top="10dp" android:right="10dp" android:bottom="10dp" />
 </shape>
