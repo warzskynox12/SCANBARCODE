@@ -8,14 +8,8 @@
         android:background="@color/white"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-
         app:layout_constraintRight_toRightOf="parent" />
-    <View
-        android:layout_width="350dp"
-        android:layout_height="125dp"
-        android:layout_centerInParent="true"
-        android:background="@drawable/scanborder"
-        />
+
     <androidx.camera.view.PreviewView
         android:id="@+id/camera_preview"
         android:layout_width="350dp"
@@ -23,8 +17,12 @@
         android:background="@drawable/border"
         android:layout_centerInParent="true"
         />
-
-
+    <View
+        android:layout_width="350dp"
+        android:layout_height="125dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/scanborder"
+        />
     <View
         android:id="@+id/view1"
         android:background="@drawable/trait"
@@ -66,5 +64,4 @@
         android:height="50dp"
         android:width="200dp"
         />
-
 </RelativeLayout>
