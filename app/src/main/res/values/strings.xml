@@ -2,4 +2,6 @@
     <string name="app_name">scan glucide aide</string>
     <string name="button_scan">Scan</string>
     <string name="button_scan_manual">Entré Manual</string>
+    <string name="display_name">Affichage</string>
+    <string name="button_return">Retour</string>
 </resources>
