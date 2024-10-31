@@ -1,7 +1,19 @@
 <resources>
-    <string name="app_name">scan glucide aide</string>
+    <string name="app_name">scan aide</string>
     <string name="button_scan">Scan</string>
     <string name="button_scan_manual">Entré Manual</string>
     <string name="display_name">Affichage</string>
     <string name="button_return">Retour</string>
+    <string name="text_init">QR code value</string>
+    <string name="text_save" translatable="false">Scan le QrCode pour L\'enregistrer</string>
+    <string name="text_code">Code :</string>
+    <string name="text_name">name :</string>
+    <string name="text_loc">localisation :</string>
+    <string name="text_price">Prix :</string>
+    <string name="enter_text">Enter text</string>
+    <string name="text_photo">Photo :</string>
+    <string name="import_document">Import Document</string>
+    <string name="save">save</string>
+    <string name="statue">statue</string>
+    <string name="vendu">Vendu</string>
 </resources>

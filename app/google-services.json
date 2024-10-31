@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "435402221835",
+    "project_id": "scan-qr-bar-code",
+    "storage_bucket": "scan-qr-bar-code.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:435402221835:android:d405784fd2f9c672395a0e",
+        "android_client_info": {
+          "package_name": "com.example.scanglucideaide"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIP3U6z4mtf3TXZHMKS4w96TkchgBUH9E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
