@@ -39,6 +39,7 @@ class RecBasPro : AppCompatActivity() {
     private lateinit var pickPhotoLauncher: ActivityResultLauncher<Intent>
     private lateinit var takePhotoLauncher: ActivityResultLauncher<Uri>
     private var selectedImageUri: Uri? = null
+    private var photoTest: Uri? = null
     private var URL = ""
     private val db = Firebase.firestore
 
@@ -71,7 +72,7 @@ class RecBasPro : AppCompatActivity() {
 
         // Sauvegarder les données
         exportDoc.setOnClickListener {
-            initSaveData()
+            saveImageToFirebase(photoTest!!)
         }
 
         initReturn()
@@ -129,8 +130,7 @@ class RecBasPro : AppCompatActivity() {
         uploadTask.addOnSuccessListener {
             photoRef.downloadUrl.addOnSuccessListener { downloadUri ->
                 URL = downloadUri.toString()
-                Log.d("Firebase", "Photo URL: $URL")
-                Toast.makeText(this, "Photo uploaded successfully", Toast.LENGTH_SHORT).show()
+                initSaveData()
             }
         }.addOnFailureListener {
             Toast.makeText(this, "Photo upload failed: ${it.message}", Toast.LENGTH_SHORT).show()
@@ -144,9 +144,8 @@ class RecBasPro : AppCompatActivity() {
                 if (result.resultCode == Activity.RESULT_OK) {
                     val uri: Uri? = result.data?.data
                     selectedImageUri = uri
-                    uri?.let {
-                        saveImageToFirebase(it)
-                    }
+                    photoTest = uri
+                    importDoc.text = "Photo importée"
                 }
             }
 
@@ -154,7 +153,8 @@ class RecBasPro : AppCompatActivity() {
         takePhotoLauncher =
             registerForActivityResult(ActivityResultContracts.TakePicture()) { success ->
                 if (success) {
-                    saveImageToFirebase(photoUri)
+                    photoTest = photoUri
+                    importDoc.text = "Photo importée"
                 } else {
                     Toast.makeText(this, "Camera capture failed", Toast.LENGTH_SHORT).show()
                 }
